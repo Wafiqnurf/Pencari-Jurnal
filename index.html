@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pencarian Jurnal Ilmiah</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pencarian Jurnal Ilmiah</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Masukkan kata kunci pencarian..."
+        />
+        <input
+          type="number"
+          id="year-from"
+          class="year-filter"
+          placeholder="Tahun awal"
+          min="1000"
+          max="9999"
+        />
+        <input
+          type="number"
+          id="year-to"
+          class="year-filter"
+          placeholder="Tahun akhir"
+          min="1000"
+          max="9999"
+        />
+        <button type="submit" id="search-button">Cari</button>
+      </form>
+      <ul id="results"></ul>
+      <div id="pagination">
+        <button id="prev-page" class="page-button" disabled>Sebelumnya</button>
+        <span id="page-info"></span>
+        <button id="next-page" class="page-button" disabled>Berikutnya</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
